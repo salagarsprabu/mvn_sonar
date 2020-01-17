@@ -6,6 +6,11 @@ pipeline {
         git 'https://github.com/adil1806/mvn_sonar.git'
         }
         }
+      stage('Analysis'){
+        steps {
+       sh '/opt/maven/bin/mvn clean verify sonar:sonar'
+        }
+      }
        stage('Build'){
         steps {
         sh '/opt/maven/bin/mvn clean install'
