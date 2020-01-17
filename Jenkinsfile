@@ -16,7 +16,7 @@ pipeline {
         sh '/opt/maven/bin/mvn clean install'
         }
         }
-        stage('Deploy'){
+        stage('Deploy using TOMCAT'){
         steps {
         echo 'deployed'
         }
